@@ -4,13 +4,16 @@ import Head from "next/head";
 import { ChatIcon } from "@chakra-ui/icons";
 import Login from "../components/Login";
 import Sidebar from "../components/Sidebar";
+import chatBox from "./chat/[id]";
 
 function MyApp({ Component, pageProps }) {
   return (
     <ChakraProvider>
       {/* //   <Component {...pageProps} /> */}
       {/* <Login /> */}
-      <Sidebar />
+      {/* <Sidebar /> */}
+      {/* <chatBox /> */}
+      <Component {...pageProps} />
     </ChakraProvider>
   );
 }
