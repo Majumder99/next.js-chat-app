@@ -40,7 +40,6 @@ const Sidebar = () => {
     <>
       <Flex
         // bg="blue.100"
-        h="100%"
         w="300px"
         borderEnd="1px solid"
         borderColor="gray.200"
@@ -79,6 +78,19 @@ const Sidebar = () => {
           sx={{ scrollbarWidth: "none" }}
           flex={1}
         >
+          {chatList()}
+          {chatList()}
+          {chatList()}
+          {chatList()}
+          {chatList()}
+          {chatList()}
+          {chatList()}
+          {chatList()}
+          {chatList()}
+          {chatList()}
+          {chatList()}
+          {chatList()}
+          {chatList()}
           {chatList()}
           {/* <chatList /> */}
         </Flex>
