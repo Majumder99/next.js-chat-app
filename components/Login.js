@@ -2,8 +2,11 @@ import React from "react";
 import { ChakraProvider, Box, Button, Center, Stack } from "@chakra-ui/react";
 import Head from "next/head";
 import { ChatIcon } from "@chakra-ui/icons";
+import { useSignInWithGoogle } from "react-firebase-hooks/auth";
+import { auth } from "../pages/firebase";
 
 const Login = () => {
+  const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
   return (
     <>
       <>
@@ -28,7 +31,12 @@ const Login = () => {
             >
               <ChatIcon w="100px" h="100px" color="white" />
             </Box>
-            <Button boxShadow="md">Sing in with google</Button>
+            <Button
+              boxShadow="md"
+              onClick={() => signInWithGoogle("", { prompt: "select_account" })}
+            >
+              Sing in with google
+            </Button>
           </Stack>
         </Center>
       </>
