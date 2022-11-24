@@ -48,7 +48,6 @@ const Sidebar = () => {
         ))}
       </>
     );
-  };
   console.log(chats);
   return (
     <>
